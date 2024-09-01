@@ -1,0 +1,10 @@
+services:
+  web:
+    build: ./backend
+    volumes:
+      - ./backend/whisper-models:/root/.cache/whisper
+    ports:
+      - "8000:8000"
+    environment:
+      - DJANGO_ENV=development
+      - PYTHONUNBUFFERED=1
