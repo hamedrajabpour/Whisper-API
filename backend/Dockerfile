@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install git -y
 RUN pip3 install -r requirements.txt
 RUN pip3 install "git+https://github.com/openai/whisper.git" 
 RUN apt-get update && apt-get install -y ffmpeg
+RUN apt-get install -y nvidia-container-toolkit
 
 
 # Add a volume for the Whisper models
