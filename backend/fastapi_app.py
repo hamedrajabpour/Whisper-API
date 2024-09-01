@@ -30,7 +30,7 @@ async def handler(files: List[UploadFile] = File(...)):
                 temp_file.write(file.file.read())
             
             # Let's get the transcript of the temporary file.
-            result = model.transcribe(temp.name)
+            result = model.transcribe(temp.name, language="fa")
 
             # Now we can store the result object for this file.
             results.append({
